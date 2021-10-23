@@ -1,0 +1,82 @@
+*******************Queue******************************
+*******************************Queue************************
+***********************************************Queue**************
+What is Queue:
+{
+    Like stack, queue is a linear data structure that stores items in 
+    First In First Out (FIFO) manner. With a queue the least recently added 
+    item is removed first. A good example of queue is any queue of consumers 
+    for a resource where the consumer that came first is served first
+}
+Diagramatic:
+{
+    let the 'M' represent person
+    {
+        [way out]  'M1' 'M2' 'M3' 'M4'
+    }
+    Explanation:
+    {
+        in this the first person coming inside 
+        goes outside first so this is (FIFO)
+        first in first out uproach
+    }
+}
+Ways of implementing
+{
+    *list
+    *collections.deque
+    *queue.Queue
+}
+Ways of implementing Code:
+{
+    list:
+    {
+        queue=[]     
+        # Adding elements to the queue
+        queue.append('a')
+
+        # Removing elements from the queue
+        print(queue.pop(0))
+
+        print(queue)
+    }
+    collections.deque:
+    {
+        from collections import deque
+        
+        # Initializing a queue
+        q = deque()
+        
+        # Adding elements to a queue
+        q.append('a')
+
+        # Removing elements from a queue
+        print(q.popleft())
+
+        print(q)
+    }
+    queue.Queue:
+    {
+        from queue import Queue
+ 
+        # Initializing a queue
+        q = Queue(maxsize = 3)
+        
+        # qsize() give the maxsize
+        # of the Queue
+        print(q.qsize())
+        
+        # Adding of element to queue
+        q.put('a')
+
+        # Return Boolean for Full
+        print(q.full())
+        
+        # Removing element from queue
+        print(q.get())
+        
+        # Return Boolean for Empty
+        # Queue
+        print("q.empty())
+    }
+}
